@@ -163,7 +163,8 @@ void SolveAll::initialize()
 
   std::cout << "found " << goals.size() << " goal states. propagating hstar values\n";
 
-  for (StateID const goal : goals) {
+  // for (StateID const goal : goals) {
+  for (const StateID &goal : goals) {
     d_queue.push(std::make_pair(goal, 0));
     hstars[goal] = 0;
   }
@@ -263,7 +264,9 @@ SearchStatus SolveAll::step()
   {
     std::cout << "dumping h* values\n";
     auto out = std::ofstream(hstar_file);
-    for (const StateID sid : expanded_states) {
+    // for (const StateID sid : expanded_states) {
+    for (const StateID &sid : expanded_states) {
+
       auto h_it = hs.find(sid);
       if (h_it == hs.end()) {
         std::cerr << "unknown h value for state\n";

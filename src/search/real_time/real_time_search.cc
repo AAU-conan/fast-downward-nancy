@@ -13,7 +13,9 @@ namespace real_time
 
 auto RealTimeSearch::get_expanded_states() -> std::unique_ptr<std::unordered_set<StateID> >
 {
-	return std::move(sc.ls->get_expanded_states());
+	// return std::move(sc.ls->get_expanded_states());
+	return sc.ls->get_expanded_states();
+
 }
 
 void RealTimeSearch::print_statistics() const {

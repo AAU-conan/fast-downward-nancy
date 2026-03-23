@@ -1,7 +1,9 @@
 builds/
-misc/
 TAGS
 *.pyc
 perf.data*
 sas_plan
 run
+.idea/
+src/cmake-build-*
+

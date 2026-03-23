@@ -8,6 +8,8 @@
 #include "../task_proxy.h"
 
 #include <memory>
+#include <limits>
+
 
 namespace pdbs {
 class IncrementalCanonicalPDBs {

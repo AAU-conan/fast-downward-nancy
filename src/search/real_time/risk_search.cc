@@ -163,7 +163,7 @@ void RiskLookaheadSearch::initialize(const GlobalState &initial_state)
 		}
 		// make the tla own the state of the top level node (I assume
 		// here, that the state of all top level nodes are distinct)
-		assert(state_owners[succ_state_id].empty());
+		assert(state_owners.find(succ_state_id) == state_owners.end());
 		make_state_owner(succ_state_id, static_cast<int>(tlas.ops.size()) - 1);
 
 		if (heuristic_error)
