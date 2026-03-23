@@ -6,4 +6,5 @@ sas_plan
 run
 .idea/
 src/cmake-build-*
+**.img
 

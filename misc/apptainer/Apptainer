@@ -15,8 +15,8 @@ Stage: build
     build_configs.py
 
 %post
-    ./build.py release_no_lp
-    cp -r /builds/release_no_lp/bin /build_output/
+    ./build.py release
+    cp -r /builds/release/bin /build_output/
 
 # Stage 2: Run the planner
 Bootstrap: localimage
